@@ -1,4 +1,4 @@
-Please add the environments/environment.ts Firbase confiugration file for proper functioning of the app
+Please add the environments/environment.ts confiugration file  for proper functioning of the app. It contains the Firebase IAM and Base URL configurations.
 
 # PhotoAlbumApp
 
