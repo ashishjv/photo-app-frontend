@@ -1,0 +1,16 @@
+<div class="uploadPicture">
+    <div>
+        <span style="font-size: x-large;">Upload Picture:</span>
+        <a [routerLink]="['/album',albumId]" type="button" class="btn btn-secondary rightButton">Back to album</a>
+        <br>
+    </div>
+    <div class="mx-auto d-block w-50 mt-4 text-primary">
+        <label class="d-block w-50 mt-4 mb-2 text-primary" for="uploadFile">Photo:</label>
+        <input type="file" name="uploadFile" id="uploadFile" (change)="enableUploadButton($event)">
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="btn btn-primary mx-auto d-block w-15 p-2 mt-4" [disabled]="!uploadButtonEnable" value="Upload Photo" (click)="uploadNewPhoto()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<span style="font-size: x-large;">Create Album:</span>
+<a [routerLink]="['/albums/me']" type="button" class="btn btn-secondary rightButton">Back to My-Albums</a>
+<br>
+<div class="createAlbum" style="min-width: fit-content;">
+    <div class="row">
+        <div class="col">
+            <label class="mx-auto d-block w-50 mt-4 text-primary" for="albumName">Album Name:</label>
+            <input type="text" class="mx-auto d-block w-50 p-2 mt-2" id="albumName" placeholder="Enter Album name" [(ngModel)]='albumName'>
+        </div>
+    </div>
+    <div class="mx-auto d-block w-50 mt-4 text-primary">
+        <label class="d-block w-50 mt-4 mb-2 text-primary" for="uploadFile">Cover Photo:</label>
+        <input type="file" name="uploadFile" id="uploadFile" [disabled]="!albumName" (change)="enableCreateButton($event)">
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="btn btn-primary mx-auto d-block w-15 p-2 mt-4" [disabled]="!createButtonEnable" value="Create Album" (click)="createNewAlbum()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.rightButton {
+    float: right;
+}
+
+.componentTitle {
+    font-size: x-large;
+}
+
+.myHover:hover {
+    transform: scale(1.1);
+}
+
+.myFlex {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid red; */
+}

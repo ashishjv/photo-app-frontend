@@ -1,0 +1,21 @@
+<div class="myAlbums" style="height: 100%;">
+    <div>
+        <span class="componentTitle">My Albums:</span>
+        <a [routerLink]="['/create']" type="button" class="btn btn-outline-success rightButton">Create Album</a>
+        <br>
+    </div>
+    <div>
+        <div class="myFlex p-5">
+            <div class="myHover mx-auto shadow p-3 mb-5 rounded" *ngFor="let album of albums" style="width: fit-content;">
+                <a [routerLink]="['/album',album.id]" style="text-decoration: none;">
+                    <div class="card" style="width: 18rem;">
+                        <img [src]="album.coverPhotoUrl" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h5 class="card-text">{{album.name}}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

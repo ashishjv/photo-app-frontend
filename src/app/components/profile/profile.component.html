@@ -1,0 +1,52 @@
+<div class="container mx-auto">
+    <span style="font-size: x-large;">Profile:</span><br>
+
+    <img class='img-fluid rounded-circle img-thumbnail mx-auto d-block' style=" max-height: 400px;" [src]="curImgURL">
+
+
+
+    <div *ngIf="viewMode; else editMode" class='normalMode mx-auto'>
+        <div class='details mx-auto'>
+            <div class='mx-auto' style="width:fit-content">
+                <span>Name : </span>
+                <span class="text-secondary ps-2">{{name}}</span>
+            </div>
+            <div class='mx-auto mt-3' style="width:fit-content">
+                <span>Email : </span>
+                <span class="text-secondary ps-2">{{email}}</span>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-1 mx-auto">
+            <button class="btn btn-sm btn-outline-primary editSaveBttn" (click)='onEdit()'>Edit</button>
+        </div>
+    </div>
+
+    <ng-template #editMode>
+        <div class="mt-4">
+            <div class="row">
+                <div class="col form-floating">
+                    <input type="text" class="form-control ps-4" id="floatingInputGrid1" [(ngModel)]='name'>
+                    <label class="ps-4" for="floatingInputGrid1">Enter your Name:</label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col form-floating">
+                    <input type="text" class="form-control ps-4" id="floatingInputGrid2" [(ngModel)]='newImgURL'>
+                    <label class="ps-4" for="floatingInputGrid2">Profile photo URL:</label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col form-floating text-center">
+                    <input type="button" class="mx-auto btn btn-sm btn-success" (click)='onCheck()' value="Load new photo">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <button class="mx-auto btn btn-sm btn-outline-primary" (click)='onSave()'>Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

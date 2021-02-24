@@ -1,0 +1,76 @@
+.appContainer {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0px auto;
+    min-height: 100vh;
+    height: 100%;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 10px 2px lightgray;
+}
+
+.appFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.mainArea {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.myNav {
+    display: flex;
+    color: white;
+    background-color: #333;
+    margin: 0px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+#menuTabs {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+}
+
+.appHeader {
+    display: flex;
+    align-items: center;
+    min-width: 185px;
+    max-width: 185px;
+}
+
+.appName {
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu-buttons {
+    display: inline-flex;
+    padding: 10px;
+    width: fit-content;
+}
+
+.menu-buttons a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-buttons:hover {
+    background-color: #111;
+}
+
+.menu-buttons.active {
+    background-color: #4CAF50;
+}

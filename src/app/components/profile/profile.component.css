@@ -1,0 +1,17 @@
+.profPic {
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px 5px lightgray;
+    width: 250px;
+}
+
+.details {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding-top: 30px;
+    justify-content: center;
+}
+
+.editSaveBttn {
+    margin-top: 40px;
+}

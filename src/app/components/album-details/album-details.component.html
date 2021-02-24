@@ -1,0 +1,22 @@
+<div class="albumDetails">
+    <div>
+        <span class="componentTitle">Album Details:</span>
+        <a [routerLink]="['/albums/me']" type="button" class="btn btn-secondary rightButton" style="margin-left: 10px;">Back to My-Albums</a>
+        <a [routerLink]="['/upload',albumId]" type="button" class="btn btn-outline-success rightButton">Upload Photo</a>
+        <br>
+    </div>
+    <div>
+        <div class="myFlex p-5">
+            <div class="myHover mx-auto shadow p-3 mb-5 rounded" *ngFor="let photo of photos" style="width: fit-content;">
+                <a [routerLink]="['/photo/',photo.id]" style="text-decoration: none;">
+                    <div class="card" style="width: 18rem;">
+                        <img [src]="photo.photoUrl" class="card-img-top" alt="...">
+                        <div class="card-body mx-auto">
+                            <h6 class="card-text">{{photo.dateCreated}}</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

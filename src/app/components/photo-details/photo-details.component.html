@@ -1,0 +1,54 @@
+<div class="photoDetails">
+    <div>
+        <span class="componentTitle">Photo Details:</span>
+        <a [routerLink]="['/album',albumId]" type="button" class="btn btn-secondary float-end">Go back to album</a>
+        <br>
+    </div>
+    <div>
+        <img [src]="photoUrl" class="img-fluid mx-auto" style="display:flex ; margin:30px auto;">
+    </div>
+    <div class="dropdown" style="text-align: center; margin-bottom: 40px;">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+            Options
+        </a>
+
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" (click)="makeThisProfilePhoto()">Make this profile photo</a>
+            </li>
+            <li>
+                <a class="dropdown-item " (click)="makeThisAlbumCover()">Make this album cover</a>
+            </li>
+            <!-- <li><a class="dropdown-item " (click)="onDelete() ">Delete Photo</a></li> -->
+        </ul>
+    </div>
+</div>
+<div class="comments mb-4">
+    <div style="display:inline; width: fit-content; z-index: 0;">
+        <span style="font-size: large;">Comments:</span>
+        <span style="float:right" *ngIf="comments.length">
+            <button type="button" class="btn btn-info btn-sm" (click)="changOrderOfComments()">Change order</button>
+        </span>
+        <br>
+    </div>
+    <div>
+        <!-- New Comment-->
+        <div class="d-flex card p-2 mt-2 mx-auto my-comment-card">
+            <textarea class="myBorder" rows=3 placeholder="Enter comments here" [(ngModel)]="message"></textarea>
+            <div style="display: block;">
+                <input type="button" class="btn btn-primary btn-sm mt-2 postButton" value="Post" (click)="postComment()" style="float:right;">
+            </div>
+
+        </div>
+        <!-- Old Comments-->
+        <div class="d-flex card p-2 mt-2 mx-auto my-comment-card" *ngFor="let comment of comments">
+            <span>
+                <small class="font-weight-bold text-primary">{{comment.createdBy}}:</small>
+                <small class="font-weight-bold" style="padding-left: 10px;">{{comment.message}}</small>
+                <small class="font-weight-bold myDate" style="float:right">{{comment.dateCreated}}</small>
+            </span>
+
+        </div>
+        <!--END-->
+    </div>
+</div>
