@@ -1,3 +1,5 @@
+Please add the environments/environment.ts Firbase confiugration file for proper functioning of the app
+
 # PhotoAlbumApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
